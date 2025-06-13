@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scratch Blocks Playground</title>
+    <script src="dist/web/scratch_blocks.js"></script>
+    <script src="dist/web/msg/scratch_msgs.js"></script>
+    <link rel="stylesheet" href="dist/web/scratch_blocks.css">
+    <style>
+      html, body { height: 100%; margin: 0; }
+      #blocklyDiv { height: 100vh; width: 100vw; }
+    </style>
+  </head>
+  <body>
+    <div id="blocklyDiv"></div>
+    <xml id="toolbox" style="display: none">
+      <block type="control_if"></block>
+      <block type="math_number"></block>
+      <block type="looks_sayforsecs"></block>
+    </xml>
+    <script>
+      const workspace = ScratchBlocks.inject('blocklyDiv', {
+        toolbox: document.getElementById('toolbox'),
+        scrollbars: true,
+      });
+    </script>
+  </body>
+</html>
